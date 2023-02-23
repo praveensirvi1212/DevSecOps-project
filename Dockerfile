@@ -6,7 +6,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
 
-RUN mvn package
+RUN ./mvnw package
 COPY target/*.jar app.jar
 
 FROM adoptopenjdk/openjdk11:alpine-slim
