@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: spring-app
-        image: praveensirvi/spring-boot-app:latest
+        image: praveensirvi/sprint-boot-app:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
 
