@@ -44,3 +44,14 @@ Download the Plugin file from here https://github.com/praveensirvi1212/DevSecOps
 1.  Click on other ci and generate token
 1.  Copy that token and save somewhere because we need this token later.
 ![](https://github.com/praveensirvi1212/jenkins_sonarqube_basic_project/blob/main/images/Screenshot%20from%202023-02-16%2012-47-08.png) 
+
+### Stage-04 : Install Docker and Create DockerHub account
+1. Installation guide is available here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/docker_installation.md
+1. Create DockerHub account 
+
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/dockerhub.png) 
+
+
+
+
+
