@@ -143,4 +143,8 @@ ui = true
 1. Now go to SonarQube and Create a Project
 1. Enter Project name, Project key > click on setup
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqubedb.png)
+1. now click on other ci > create a project token 
+1. click on continue > Run analysis on your project > maven > copy following commands and save it some where 
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/soanr.png)
+
 
