@@ -152,5 +152,20 @@ sudo gpasswd -a jenkins docker
 ```sh 
 aws configure
  ``` 
-paste your  access key and secret key .
-Keep in mind that your jenkins user should be able to  work with aws cli 
+paste your  access key and secret key 
+Keep in mind that your jenkins user also can work with aws cli 
+
+#### Note – in this project i used just simple method but there are other methods also
+but there will be a different pipleline syntax for that 
+
+1. go to jenkins > Manage Credentials > system > Add credentials > AWS credentials > give your access key and secret key > save
+
+Pipeline Syntax 
+```sh 
+stage("Upload"){
+steps{
+withAWS(region:"${region}", credentials:"${aws_credential}){
+s3Upload(file:"${TAG_NAME}", bucket:"${bucket}", path:"${TAG_NAME}/")
+} 
+}
+ ``` 
