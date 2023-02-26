@@ -87,6 +87,9 @@ Minikube installation Guide is Available here  https://www.linuxtechi.com/how-to
 # Done with Installation , Now will we integrate all the tools with Jenkins
 ### Stage-01 : Hashicorp Vault integration with Jenkins
 I am assuming that your Vault server is running 
+
+Video guide to integrate Hashicorp Vault with Jnekins https://www.youtube.com/watch?v=5-RMu9M_Anc
+
 ##### 1. create Vault server App role and secret id 
 * Copy the following to `/etc/vault.d/vault.hcl`
 ```
@@ -129,13 +132,15 @@ ui = true
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/approleVault.png) 
 
 
-### Stage-02: SonarQube integration with Jenkins
-1. Open SonarQube
-1. Create a Project
+ ### Stage-02: SonarQube integration with Jenkins
+1. Open SonarQube and login using admin username and admin password
+1. go to Administrator > security > create token >copy this token and save it somewhere
+1. Now go to jenkins >Manage Credentials > system > Add credentials > secret text file > paste token we create in sonarqube and save and apply.
+1. go to manage Jenkins > Configure System > Add SonarQube Server name,url and credentials
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqube.png)
+1. go to manage Jenkins > Global tool configuration >  Add Maven and SonarQube Scanner
+
+1. Now go to SonarQube and Create a Project
 1. Enter Project name, Project key > click on setup
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqubedb.png)
-1. Create a Sonarqube token > copy this token and save it somewhere
-1. Now go to jenkins >Manage Credentials > system > Add credentials > secret text file > paste  token we create in sonarqube and save and apply.
-1. go to manage Jenkins > Global tool configuration >  Add Maven and SonarQube Scanner
-1. go to manage Jenkins > Configure System > Add SonarQube Server
-![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqube.png)
+
