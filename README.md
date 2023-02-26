@@ -27,5 +27,13 @@ Push all the web application page code file into github
 
 ### Stage-02 : Install Jenkins and start Jenkins 
 1. Installation guide is available here  https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Jenkins_installation.md
-1. Install sonarqube scanner plugins
-1. go to manage jenkins > manage pulgins > search for plugins > install without restart 
+1. After installation insatll suggested plugins
+1. Open Jenkins Dashboard and install required plugins – SonarQube Scanner, Hashicorp Vault, Slack
+1. go to manage jenkins > manage pulgins > search for plugins > install without restart
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/jenkins.png) 
+
+1. We will required another pulgin called - Kubernetes Continuous Deploy Plugin ( this plugin is deprecated but we can down grade the version for just testing purpose)
+Download the Plugin file from here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/kubernetes-cd.hpi
+1. Now go to manage jenkins > manage pulgins > Advanced Setting > Deploy Plugin > choose the download file ( kubernetes-cd.hpi) > click on Deploy
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/plugins.png) 
+
