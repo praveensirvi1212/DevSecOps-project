@@ -107,7 +107,7 @@ ui = true
 * `sudo systemctl stop vault`
 * `sudo systemctl start vault`
 
-# Commands to run to configure Vault and create AppRole
+#### Commands to run to configure Vault and create AppRole
 
 * `export VAULT_ADDR='http://127.0.0.1:8200'`
 * `vault operator init`
