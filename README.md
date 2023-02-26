@@ -190,3 +190,8 @@ path "secrets/creds/*" {
 }
 ```
 * `vault policy write jenkins jenkins-policy.hcl`
+
+1. Now go to jenkins > Manage credentials > global > create credentials with ‘vault username-password credentials ’
+1. give path of your credentials ‘secrets/creds/docker’ 
+1. give username key as username and password key as password
+1. give id name as you wish and description and save it 
