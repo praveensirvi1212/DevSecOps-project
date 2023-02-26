@@ -64,7 +64,7 @@ echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main |
 sudo apt-get update
 sudo apt-get install trivy
    ``` 
-####After trivy installation you can scan Container Images, FileSystem, Git Repositories
+#### After trivy installation you can scan Container Images, FileSystem, Git Repositories
 In our can we will scan contianer images
 
 ```sh 
