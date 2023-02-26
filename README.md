@@ -178,7 +178,7 @@ stage("Upload"){
 
 ##### in this project i used Hashicorp Vault to store my credentials for security purpose  but you can directly store in jenkins also . 
 To store secrets into Vault-
-#### Commands to create `docker` secret
+#### Commands to store `docker` secret into Vault
 
 * `vault secrets enable -path=secrets kv`
   * https://www.vaultproject.io/docs/secrets/kv
