@@ -87,7 +87,7 @@ Minikube installation Guide is Available here  https://www.linuxtechi.com/how-to
 # Done with Installation , Now will we integrate all the tools with Jenkins
 ### Stage-01 : Hashicorp Vault integration with Jenkins
 I am assuming that your Vault server is running 
-1. create Vault server App role and secret id 
+##### 1. create Vault server App role and secret id 
 * Copy the following to `/etc/vault.d/vault.hcl`
 ```
 storage "raft" {
@@ -125,5 +125,5 @@ ui = true
 	* copy the role_id and store somewhere
 * `vault write -f auth/approle/role/jenkins-role/secret-id`
 
-1. Now go to jenkins > Manage  Jenkins >Manage Credentials > system > Add credentials > Vault App Role Credentials > paste roleid and secret id token we create in Vault and save and apply.
+##### 2. Now go to jenkins > Manage  Jenkins >Manage Credentials > system > Add credentials > Vault App Role Credentials > paste roleid and secret id token we create in Vault and save and apply.
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/approleVault.png) 
