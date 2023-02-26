@@ -55,7 +55,7 @@ Download the Plugin file from here https://github.com/praveensirvi1212/DevSecOps
 
 
 ### Stage-05 : Install Trivy for Vulnerability Scanner for Containers and other Artifacts
-i am following  Debian/Ubuntu  bases installation guide you can choose accourding to your os
+i am following  Debian/Ubuntu  based installation guide you can choose accourding to your os
 
 ```sh 
    sudo apt-get install wget apt-transport-https gnupg lsb-release
