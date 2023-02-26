@@ -71,4 +71,6 @@ In our can we will scan contianer images
    trivy image [YOUR_IMAGE_NAME]
    ``` 
 
+### Stage-06 : Install Hashicorp Vault server 
+1. Installation guide is available here https://www.cyberithub.com/how-to-install-hashicorp-vault-on-ubuntu-20-04-lts/
 
