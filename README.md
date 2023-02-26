@@ -83,3 +83,43 @@ Install Slack from official website of Slack https://slack.com/intl/en-in/downlo
 
 ### Stage-08: Install Minikube
 Minikube installation Guide is Available here  https://www.linuxtechi.com/how-to-install-minikube-on-ubuntu/
+
+# Done with Installation , Now will we integrate all the tools with Jenkins
+### Stage-01 : Hashicorp Vault integration with Jenkins
+I am assuming that your Vault server is running 
+* Copy the following to `/etc/vault.d/vault.hcl`
+```
+storage "raft" {
+  path    = "/opt/vault/data"
+  node_id = "raft_node_1"
+}
+
+listener "tcp" {
+  address     = "0.0.0.0:8200"
+  tls_disable = 1
+}
+
+api_addr = "http://127.0.0.1:8200"
+cluster_addr = "https://127.0.0.1:8201"
+ui = true
+```
+
+* `sudo systemctl stop vault`
+* `sudo systemctl start vault`
+
+# Commands to run to configure Vault and create AppRole
+
+* `export VAULT_ADDR='http://127.0.0.1:8200'`
+* `vault operator init`
+* `vault operator unseal`
+* `vault operator unseal`
+* `vault operator unseal`
+* `vault login <Initial_Root_Token>`
+   * `<Initial_Root_Token>` is found in the output of `vault operator init`
+* `vault auth enable approle`
+* `vault auth enable approle`
+  * https://www.vaultproject.io/docs/auth/approle
+* `vault write auth/approle/role/jenkins-role token_num_uses=0 secret_id_num_uses=0 policies="jenkins"`
+* `vault read auth/approle/role/jenkins-role/role-id`
+	* copy the role_id and store somewhere
+* `vault write -f auth/approle/role/jenkins-role/secret-id`
