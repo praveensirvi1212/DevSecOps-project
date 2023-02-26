@@ -145,3 +145,12 @@ ui = true
  ```sh 
 sudo gpasswd -a jenkins docker
  ``` 
+### Stage-04: Install and Configure AWS CLI
+ 1.Installation Guide is Available here https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html 
+1. go toAWS > create access key and secret key
+1. configure aws cli using
+```sh 
+aws configure
+ ``` 
+paste your  access key and secret key 
+Keep in mind that your jenkins user also can work with aws cli 
