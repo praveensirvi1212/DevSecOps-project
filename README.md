@@ -147,4 +147,7 @@ ui = true
 1. click on continue > Run analysis on your project > maven > copy following commands and save it some where 
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/soanr.png)
 
-
+### Stage-03 : Add jenkins user to docker group
+ ```sh 
+sudo gpasswd -a jenkins docker
+ ``` 
