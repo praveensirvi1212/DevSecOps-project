@@ -124,3 +124,6 @@ ui = true
 * `vault read auth/approle/role/jenkins-role/role-id`
 	* copy the role_id and store somewhere
 * `vault write -f auth/approle/role/jenkins-role/secret-id`
+
+1. Now go to jenkins > Manage  Jenkins >Manage Credentials > system > Add credentials > Vault App Role Credentials > paste roleid and secret id token we create in Vault and save and apply.
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/approleVault.png) 
