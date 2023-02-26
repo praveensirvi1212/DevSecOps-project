@@ -76,3 +76,7 @@ In our can we will scan contianer images
 
 ### Stage-07 : Install Slack
 Install Slack from official website of Slack https://slack.com/intl/en-in/downloads/linux
+
+
+### Stage-08: Install Minikube
+Minikube installation Guide is Available here  https://www.linuxtechi.com/how-to-install-minikube-on-ubuntu/
