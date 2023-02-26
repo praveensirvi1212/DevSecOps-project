@@ -24,3 +24,8 @@ In this project, In this Project I created an end-to-end CI/CD pipeline while ke
 Push all the web application page code file into github
 
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/code.png) 
+
+### Stage-02 : Install Jenkins and start Jenkins 
+1. Installation guide is available here  https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Jenkins_installation.md
+1. Install sonarqube scanner plugins
+1. go to manage jenkins > manage pulgins > search for plugins > install without restart 
