@@ -74,3 +74,5 @@ In our can we will scan contianer images
 ### Stage-06 : Install Hashicorp Vault server 
 1. Installation guide is available here https://www.cyberithub.com/how-to-install-hashicorp-vault-on-ubuntu-20-04-lts/
 
+### Stage-07 : Install Slack
+Install Slack from official website of Slack https://slack.com/intl/en-in/downloads/linux
