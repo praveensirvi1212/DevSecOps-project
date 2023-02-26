@@ -152,5 +152,5 @@ sudo gpasswd -a jenkins docker
 ```sh 
 aws configure
  ``` 
-paste your  access key and secret key 
-Keep in mind that your jenkins user also can work with aws cli 
+paste your  access key and secret key .
+Keep in mind that your jenkins user should be able to  work with aws cli 
