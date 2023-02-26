@@ -195,3 +195,57 @@ path "secrets/creds/*" {
 1. give path of your credentials ‘secrets/creds/docker’ 
 1. give username key as username and password key as password
 1. give id name as you wish and description and save it 
+
+### Stage-06 : kubernetes Integeration  with jenkins
+1. go to jenkins > Manage credentials > System ( global) > Add credentials > tkind - Kubernetes configuration ( Kuberconfig)
+1. give id and description
+1. go to kubeconfig > Enter directly
+
+ Now you have to copy the content of your kubeconfig file of your cluster.
+for that -
+1. go to your home directory , you will find  ` .kube` 
+1. change your directory to .kube and cat your config file
+
+You will find your kubeconfig like this 
+```sh 
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority:  /home/praveen/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Fri, 24 Feb 2023 19:17:00 IST
+        provider: minikube.sigs.k8s.io
+        version: v1.28.0
+      name: cluster_info
+    server: https://192.168.49.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Fri, 24 Feb 2023 19:17:00 IST
+        provider: minikube.sigs.k8s.io
+        version: v1.28.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+- context:
+    cluster: ""
+    namespace: dev
+    user: ""
+  name: my-context
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /home/praveen/.minikube/profiles/minikube/client.crt
+    client-key: home/praveen/.minikube/profiles/minikube/client.key
+```
+##### Note : I encoded to base64 the data of ca.crt, client.key and client.crt and directly paste the data instead of /home/praveen/.minikube/profiles/minikube/client.crt . But you have to specify the `certificate- authority` to  `certificate- authority-data` ,  `client-certificate` to  `client-certificate-data`,  `client-key` to  `client-key-data`
+
+Now copy the config file data and paste into jenkins > save
