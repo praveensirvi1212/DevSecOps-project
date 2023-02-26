@@ -166,6 +166,7 @@ stage("Upload"){
 steps{
 withAWS(region:"${region}", credentials:"${aws_credential}){
 s3Upload(file:"${TAG_NAME}", bucket:"${bucket}", path:"${TAG_NAME}/")
-} 
-}
+	} 
+     }
+}     
  ``` 
