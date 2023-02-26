@@ -87,6 +87,7 @@ Minikube installation Guide is Available here  https://www.linuxtechi.com/how-to
 # Done with Installation , Now will we integrate all the tools with Jenkins
 ### Stage-01 : Hashicorp Vault integration with Jenkins
 I am assuming that your Vault server is running 
+1. create Vault server App role and secret id 
 * Copy the following to `/etc/vault.d/vault.hcl`
 ```
 storage "raft" {
