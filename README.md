@@ -140,6 +140,14 @@ ui = true
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqube.png)
 1. go to manage Jenkins > Global tool configuration >  Add Maven and SonarQube Scanner
 
+1. Now go to SonarQube > Quality gates > create your own quality gate
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/quality%20gate.png)
+1. Add conditions with your own requirement
+1. Select your project and Set this quality gate as defalut
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/qualiygate.png)
+1. Now go to your Project > project setting > webhook
+1. create webhook with your Jenkins url
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/webhook.png)
 
 ### Stage-03 : Add jenkins user to docker group
  ```sh 
