@@ -171,3 +171,22 @@ stage("Upload"){
 	      }	  
 }
  ``` 
+### Stage-05: DockerHub Integeration with jenkins for docker login
+1. go to DockerHub > login into DockerHub
+1. go to Account setting > security > generate a token 
+1. copy this token and save it some where
+
+##### in this project i used Hashicorp Vault to store my credentials for security purpose  but you can directly store in jenkins also . 
+To store secrets into Vault-
+# Commands to create `docker` secret
+
+* `vault secrets enable -path=secrets kv`
+  * https://www.vaultproject.io/docs/secrets/kv
+* `vault write secrets/creds/docker username=your-dockerhub-username password=token-generated-in-dockerhub`
+* Create jenkins-policy.hcl
+```
+path "secrets/creds/*" {
+ capabilities = ["read"]
+}
+```
+* `vault policy write jenkins jenkins-policy.hcl`
