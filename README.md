@@ -249,3 +249,19 @@ users:
 ##### Note : I encoded to base64 the data of ca.crt, client.key and client.crt and directly paste the data instead of /home/praveen/.minikube/profiles/minikube/client.crt . But you have to specify the `certificate- authority` to  `certificate- authority-data` ,  `client-certificate` to  `client-certificate-data`,  `client-key` to  `client-key-data`
 
 Now copy the config file data and paste into jenkins > save
+
+### Stage-07 : Slack Integeration with Jenkins
+1. Open Slack > create workspace > create channel
+1. Now go to this site https://slack-t8s2905.slack.com/apps/new/A0F7VRFKN-jenkins-ci
+1. Now choose your channel name
+
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/slack.png)
+1. Click on Add Jenkins CI inetegration
+1. Copy the workspace name and token
+1. store your secret token into Hashicorp Vault
+
+* `vault write secrets/creds/slack secret=your-slack-token `
+1. Now go to jenkins > Manage credentials > system (global ) > Vault sceret text credentials 
+1. give your vault sercrets path, Vault key and save
+1. Now go to configure system > slack > give your slack name and select credentials , give your Default channel name like ‘#devops’
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/slcakws.png)
