@@ -127,3 +127,14 @@ ui = true
 
 ##### 2. Now go to jenkins > Manage  Jenkins >Manage Credentials > system > Add credentials > Vault App Role Credentials > paste roleid and secret id token we create in Vault and save and apply.
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/approleVault.png) 
+
+
+### Stage-02: SonarQube integration with Jenkins
+1. Open SonarQube
+1. Create a Project
+1. Enter Project name, Project key > click on setup
+1. Create a Sonarqube token > copy this token and save it somewhere
+1. Now go to jenkins >Manage Credentials > system > Add credentials > secret text file > paste  token we create in sonarqube and save and apply.
+1. go to manage Jenkins > Global tool configuration >  Add Maven and SonarQube Scanner
+1. go to manage Jenkins > Configure System > Add SonarQube Server
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqube.png)
