@@ -19,3 +19,8 @@ In this project, In this Project I created an end-to-end CI/CD pipeline with Dev
 1. Minikube & Kubectl
 1. Hashicorp Vault
 1. Slack
+
+### Stage-01 : Install JDK and Create a Java Springboot application
+Push all the web application page code file into github
+
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/code.png) 
