@@ -76,7 +76,8 @@ HashiCorp Vault is a secret-management tool specifically designed to control a
 1. Installation guide is available here https://www.cyberithub.com/how-to-install-hashicorp-vault-on-ubuntu-20-04-lts/
 
 ### Stage-07 : Install Slack
-Slack is a workplace communication tool, “a single place for messaging, tools and files.” 
+Slack is a workplace communication tool, “a single place for messaging, tools and files.” .
+
 Install Slack from official website of Slack https://slack.com/intl/en-in/downloads/linux
 
 
