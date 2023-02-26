@@ -29,3 +29,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/doc
    ```sh 
    sudo systemctl status docker
    ```
+   #Step 6: Add user to docker group 
+   
+
+   ```sh 
+    sudo usermod -aG docker $USER
+   ```
