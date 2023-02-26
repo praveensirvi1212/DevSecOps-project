@@ -133,6 +133,7 @@ ui = true
 1. Open SonarQube
 1. Create a Project
 1. Enter Project name, Project key > click on setup
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqubedb.png)
 1. Create a Sonarqube token > copy this token and save it somewhere
 1. Now go to jenkins >Manage Credentials > system > Add credentials > secret text file > paste  token we create in sonarqube and save and apply.
 1. go to manage Jenkins > Global tool configuration >  Add Maven and SonarQube Scanner
