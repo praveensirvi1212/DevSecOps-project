@@ -129,18 +129,17 @@ ui = true
 
  ### Stage-02: SonarQube integration with Jenkins
 1. Open SonarQube and login using admin username and admin password
-1. go to Administrator > security > create token >copy this token and save it somewhere
+1. Create a Project >Enter Project name, Project key > click on setup
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqubedb.png)
+1. Create sonarqube token > and save it soemwhere
+1. click on continue > Run analysis on your project > maven > copy following commands and save it some where
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/soanr.png)
 1. Now go to jenkins >Manage Credentials > system > Add credentials > secret text file > paste token we create in sonarqube and save and apply.
+
 1. go to manage Jenkins > Configure System > Add SonarQube Server name,url and credentials
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqube.png)
 1. go to manage Jenkins > Global tool configuration >  Add Maven and SonarQube Scanner
 
-1. Now go to SonarQube and Create a Project
-1. Enter Project name, Project key > click on setup
-![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqubedb.png)
-1. now click on other ci > create a project token 
-1. click on continue > Run analysis on your project > maven > copy following commands and save it some where 
-![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/soanr.png)
 
 ### Stage-03 : Add jenkins user to docker group
  ```sh 
