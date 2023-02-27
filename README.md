@@ -435,3 +435,20 @@ stage('Docker Push') {
       }
 }
  ``` 
+### Stage-08: Deploy to kubernetes
+write your kubernetes  deployment and service manifest.
+Now generate pipeline syntax:- 
+For this Kubernetes continuous Deploy plugins should be installed
+1. go to jenkins > your project > pipeline syntax > search for kubernetesDeploy: Deploy to kubernetes
+1. choose your kubeconfig , we created kubeconfig credentials into stage 6 kubernetes Integeration with jenkins
+1. generate pipeline syntax
+1. write your kubernetes manifest name  into configs: 'your-k8s-manifest-name'
+ ```sh
+stage('Deploy to k8s') {
+	steps {
+	     script{
+                      kubernetesDeploy configs: 'spring-boot-deployment.yaml', kubeconfigId: 'kubernetes'
+		}
+	}
+}
+```
