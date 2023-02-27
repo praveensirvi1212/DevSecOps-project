@@ -405,7 +405,7 @@ stage('Upload Scan report to AWS S3') {
 }
 ```
 #### Note – in this Porject i configure aws cli for jenkins user also and execute just shell command . But you can use another method , save your credentials into jenkins and generate a pipeline to upload object to s3.
-For that - 
+For that - S3 plugins should be installed
 Pipeline Syntax 
 ```sh 
 stage("Upload"){
