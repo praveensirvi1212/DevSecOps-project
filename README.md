@@ -20,7 +20,8 @@ In this project, I created an end-to-end CI/CD pipeline while keeping in mind Se
 1. Hashicorp Vault
 1. Slack
 
-## Want to create this Project by your own  then *Follow these  project steps*
+# Want to create this Project by your own  then *Follow these  project steps*
+## Step: 1 Installation Part 
 
 ### Stage-01 : Install JDK and Create a Java Springboot application
 Push all the web application page code file into github
@@ -80,6 +81,9 @@ Install Slack from official website of Slack https://slack.com/intl/en-in/downlo
 Minikube installation Guide is Available here  https://www.linuxtechi.com/how-to-install-minikube-on-ubuntu/
 
 # Done with Installation , Now will we integrate all the tools with Jenkins
+
+## Step: 2 Integeration Part
+
 ### Stage-01 : Hashicorp Vault integration with Jenkins
 I am assuming that your Vault server is running 
 
@@ -268,6 +272,9 @@ Now copy the config file data and paste into jenkins > save
 
 
 # We integrated all the tools with Jenkins, Now Create a declarative jenkins  pipeline for each stage.
+
+## Step: 3 Pipeline creation
+
 ### General Jenkins  declarative Pipeline Syntax
 I used Tools, Declarative Pipeline beccause we required build tool called maven
 
@@ -482,7 +489,9 @@ slackSend( channel: "#devops", token: 'slack-token', color : "danger", message: 
 }
  ```
 #### Find whole pipeline here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Jenkinsfile 
- 
+
+## Step: 4 Projecct Output
+
 # Final outputs of this Project
 ### Jenkins Output : 
 After 86th  Build my  jenkins pipeline became successful. 
