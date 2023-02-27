@@ -481,3 +481,17 @@ slackSend( channel: "#devops", token: 'slack-token', color : "danger", message: 
 }
 }
  ```
+#### Find whole pipeline here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Jenkinsfile 
+ 
+# Final outputs of this Project
+###Jenkins Output : 
+After 86th  Build my  jenkins pipeline became successful. 
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/pipelineop.png) 
+
+###Sonarqube Output: 
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqubeop.png) 
+
+### Quality Gate Status in Jenkins
+This Output is the build number 86th   
+You applied your custom quality gate like : there should be zero ( bug, Vulnerability , code smell ) and your code have greater then 0 (bugs, vulnerability , code smells) . Then your quality gate status will become failure or red. If your quality gate status beome failure , stages after quality gate will be failure.
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/qualitygateop.png) 
