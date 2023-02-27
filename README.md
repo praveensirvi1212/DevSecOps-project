@@ -426,7 +426,7 @@ In this stage i  shell command sh to push docker image to docker hub. I stored C
  ``` sh
 stage('Docker Push') {
        steps {
-	withVault(configuration: [skipSslVerification: true, timeout: 60, vaultCredentialId:   'vault-cred', vaultUrl: 'http://your-vault-server-    		url:8200'], vaultSecrets: [[path: 'secrets/creds/docker', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
+	withVault(configuration: [skipSslVerification: true, timeout: 60, vaultCredentialId:   'vault-cred', vaultUrl: 'http://your-vault-server-url:8200'], vaultSecrets: [[path: 'secrets/creds/docker', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
 	sh "docker login -u ${username} -p ${password} "
 	sh 'docker push praveensirvi/sprint-boot-app:v1.$BUILD_ID'
 	sh 'docker push praveensirvi/sprint-boot-app:latest'
