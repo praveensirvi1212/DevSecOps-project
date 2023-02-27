@@ -343,3 +343,19 @@ stage('SonarQube Analysis'){
 }
 
 ```
+### Stage-04 : Quality gate
+This step pauses Pipeline execution and wait for previously submitted SonarQube analysis to be completed and returns quality gate status. Setting the parameter abortPipeline to true will abort the pipeline if quality gate status is not green.
+1. Defiine a stage as Quality gate
+1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
+1. search for  waitForQualityGate: Wait for SonarQube analysis to be completed and return quality gate status
+1. generate pipeline syntax and paste it into steps
+1. timeout is optional 
+```sh
+stage("Quality Gate") {
+            steps {
+              timeout(time: 1, unit: 'HOURS') {
+                waitForQualityGate abortPipeline: true
+              }
+            }
+          }
+```
