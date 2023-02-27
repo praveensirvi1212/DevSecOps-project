@@ -484,7 +484,7 @@ slackSend( channel: "#devops", token: 'slack-token', color : "danger", message: 
 #### Find whole pipeline here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Jenkinsfile 
  
 # Final outputs of this Project
-###Jenkins Output : 
+### Jenkins Output : 
 After 86th  Build my  jenkins pipeline became successful. 
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/pipelineop.png) 
 
