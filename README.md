@@ -416,3 +416,22 @@ stage("Upload"){
 	      }	  
 }
  ``` 
+### Stage-08: Push Docker images to DockerHub
+In this stage i  shell command sh to push docker image to docker hub. I stored Credentials into Vault and access into jenkins using  vault key. You can store DockerHub credentials into jenkins and use as environment variables
+1. Define  a stage Docker images push
+1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
+1. search for sh:shell script
+1. give your shell command to push docker images to docker hub
+
+ ``` sh
+stage('Docker Push') {
+       steps {
+	withVault(configuration: [skipSslVerification: true, timeout: 60, vaultCredentialId:   'vault-cred', vaultUrl: 'http://your-vault-server-    		url:8200'], vaultSecrets: [[path: 'secrets/creds/docker', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
+	sh "docker login -u ${username} -p ${password} "
+	sh 'docker push praveensirvi/sprint-boot-app:v1.$BUILD_ID'
+	sh 'docker push praveensirvi/sprint-boot-app:latest'
+	sh 'docker rmi praveensirvi/sprint-boot-app:v1.$BUILD_ID praveensirvi/sprint-boot-app:latest'
+	}
+      }
+}
+ ``` 
