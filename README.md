@@ -360,7 +360,8 @@ stage("Quality Gate") {
           }
 ```
 ### Stage-05 : Docker Build
-First write your dockerfile to build docker images.I have posted dockerfile here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Dockerfile
+First write your dockerfile to build docker images.I have posted my  dockerfile here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Dockerfile .
+
 In this stage i  shell command sh to build docker image
 1. Define  a stage Docker Build
 1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
