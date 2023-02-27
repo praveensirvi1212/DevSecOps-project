@@ -455,3 +455,29 @@ stage('Deploy to k8s') {
 	}
 }
 ```
+## Stage: Post build action 
+In post build action i used slack notification . After  build jenkins will send notification massage to slack whether your build success or failed.
+1. go to jenkins > your project > pipeline syntax > search for slacksend: send slack message 
+1. write your channel name and message > generate pipeline synatx .
+#### Note – i used custom messages for my project . I Created a function for slack notification and called the function into post build .
+ ```sh
+post{
+	always{
+		sendSlackNotifcation()
+	}
+}
+```
+sendSlackNotification function 
+ ```sh
+def sendSlackNotifcation()
+{
+if ( currentBuild.currentResult == "SUCCESS" ) {
+buildSummary = "Job_name: ${env.JOB_NAME}\n Build_id: ${env.BUILD_ID} \n Status: *SUCCESS*\n Build_url: ${BUILD_URL}\n Job_url: ${JOB_URL} \n"
+slackSend( channel: "#devops", token: 'slack-token', color: 'good', message: "${buildSummary}")
+}
+else {
+buildSummary = "Job_name: ${env.JOB_NAME}\n Build_id: ${env.BUILD_ID} \n Status: *FAILURE*\n Build_url: ${BUILD_URL}\n Job_url: ${JOB_URL}\n \n "
+slackSend( channel: "#devops", token: 'slack-token', color : "danger", message: "${buildSummary}")
+}
+}
+ ```
