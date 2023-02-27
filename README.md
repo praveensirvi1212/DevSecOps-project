@@ -513,5 +513,7 @@ You applied your custom quality gate like : there should be zero ( bug, Vulnerab
 ### Application output deployed in k8s 
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/spring-boot-app-op.png) 
 
+### Slack output 
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/slackop.png) 
 
 
