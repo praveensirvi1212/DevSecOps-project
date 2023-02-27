@@ -325,9 +325,9 @@ stage ('Build & JUnit Test') {
 	}
 }
 ```
-### Stage-02 : SonarQube Analysis
+### Stage-03 : SonarQube Analysis
 In this stage i used withSonarQubeEnv to  Prepare SonarQube Scanner environment
-
+and shell command sh
 1. Define  a stage SonarQube Analysis
 1. paste the command that we created at the time of sonarqube project creation
 ```sh
