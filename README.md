@@ -302,7 +302,6 @@ stage('Checkout git') {
 }
 ```
 ### Stage-02 : Build and Junit test
-In this stage i just used shell script sh
 1. Defiine a stage as Build and Junit test 
 1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
 1. search for sh:shell script 
