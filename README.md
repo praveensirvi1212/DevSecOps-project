@@ -375,3 +375,17 @@ stage('Docker Build') {
 	}
 }
 ```
+### Stage-06: Trivy Image scan
+In this stage i  shell command sh to scan docker image
+1. Define  a stage Trivy Image scan
+1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
+1. search for sh:shell script 
+1.  give your Trivy shell command to scan build image
+#### Note – There are 3 types of report output  format of trivy ( Table , JSON, Template). I used  html template for output report of trivy scan
+```sh
+stage('Image Scan') {
+	steps {
+	sh ' trivy image --format template --template "@/usr/local/share/trivy/templates/html.tpl" -o report.html praveensirvi/sprint-boot-app:latest '
+	}
+}
+```
