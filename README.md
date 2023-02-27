@@ -359,3 +359,19 @@ stage("Quality Gate") {
             }
           }
 ```
+### Stage-03 : Docker Build
+In this stage i  shell command sh to build docker image
+1. Define  a stage Docker Build
+1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
+1. search for sh:shell script 
+1. give your shell command to build image
+1. I used build id of jenkins to make versions of docker images
+
+```sh
+stage('Docker Build') {
+      steps {
+           sh 'docker build -t praveensirvi/sprint-boot-app:v1.$BUILD_ID .'
+           sh 'docker image tag praveensirvi/sprint-boot-app:v1.$BUILD_ID praveensirvi/sprint-boot-app:latest'
+	}
+}
+```
