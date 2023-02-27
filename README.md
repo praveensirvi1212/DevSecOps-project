@@ -507,6 +507,8 @@ You applied your custom quality gate like : there should be zero ( bug, Vulnerab
 ### Images in DockerHub pushed by jenkins 
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/dockerhubop.png) 
 
+### kubernetes output ( deployment and service created by jenkins) 
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/kubernetesop.png) 
 
 
 
