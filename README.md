@@ -438,7 +438,8 @@ stage('Docker Push') {
 }
  ``` 
 ### Stage-08: Deploy to kubernetes
-write your kubernetes  deployment and service manifest.
+write your kubernetes  deployment and service manifest.Find my kubernetes manifest here https://github.com/praveensirvi1212/DevSecOps-project/blob/main/spring-boot-deployment.yaml .
+
 Now generate pipeline syntax:- 
 For this Kubernetes continuous Deploy plugins should be installed
 1. go to jenkins > your project > pipeline syntax > search for kubernetesDeploy: Deploy to kubernetes
