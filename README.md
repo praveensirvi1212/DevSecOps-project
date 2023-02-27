@@ -498,3 +498,13 @@ You applied your custom quality gate like : there should be zero ( bug, Vulnerab
 
 ### Trivy report in AWS S3 push by jenkins
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/trivy-report-s3.png) 
+
+
+### Trivy report 
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/TrivyReprt.png) 
+
+
+
+
+
+
