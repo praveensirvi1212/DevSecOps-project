@@ -495,3 +495,6 @@ After 86th  Build my  jenkins pipeline became successful.
 This Output is the build number 86th. SonarQube Quality gate status is green and passed .   
 You applied your custom quality gate like : there should be zero ( bug, Vulnerability , code smell ) and your code have greater then 0 (bugs, vulnerability , code smells) . Then your quality gate status will become failure or red. If your quality gate status beome failure , stages after quality gate will be failure.
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/qualitygateop.png) 
+
+### Trivy report in AWS S3 push by jenkins
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/trivy-report-s3.png) 
