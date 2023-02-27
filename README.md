@@ -169,16 +169,7 @@ configure aws cli for jenkins user also
 #### Method 2 
 1. go to jenkins > Manage Credentials > system > Add credentials > AWS credentials > give your access key and secret key > save
 
-Pipeline Syntax 
-```sh 
-stage("Upload"){
-	steps{
-	      withAWS(region:"${region}", credentials:"${aws_credential}){
-		s3Upload(file:"${TAG_NAME}", bucket:"${bucket}", path:"${TAG_NAME}/")
-		  } 
-	      }	  
-}
- ``` 
+
 ### Stage-05: DockerHub Integeration with jenkins for docker login
 1. go to DockerHub > login into DockerHub
 1. go to Account setting > security > generate a token 
