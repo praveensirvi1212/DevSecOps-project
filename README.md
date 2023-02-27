@@ -488,7 +488,7 @@ slackSend( channel: "#devops", token: 'slack-token', color : "danger", message: 
 After 86th  Build my  jenkins pipeline became successful. 
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/pipelineop.png) 
 
-###Sonarqube Output: 
+### Sonarqube Output: 
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/sonarqubeop.png) 
 
 ### Quality Gate Status in Jenkins
