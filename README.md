@@ -267,7 +267,7 @@ Now copy the config file data and paste into jenkins > save
 
 
 
-# We integrateed all the tools with Jenkins, Now Create a declarative jenkins  pipeline for each stage.
+# We integrated all the tools with Jenkins, Now Create a declarative jenkins  pipeline for each stage.
 ### General Jenkins  declarative Pipeline Syntax
 I used Tools, Declarative Pipeline beccause we required build tool called maven
 
