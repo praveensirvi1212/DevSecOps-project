@@ -376,7 +376,7 @@ stage('Docker Build') {
 }
 ```
 ### Stage-06: Trivy Image scan
-In this stage i  shell command sh to scan docker image
+In this stage i  trivy shell command sh to scan docker image
 1. Define  a stage Trivy Image scan
 1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
 1. search for sh:shell script 
