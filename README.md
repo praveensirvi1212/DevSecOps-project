@@ -264,3 +264,83 @@ Now copy the config file data and paste into jenkins > save
 1. give your vault sercrets path, Vault key and save
 1. Now go to configure system > slack > give your slack name and select credentials , give your Default channel name like ‘#devops’
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/slcakws.png)
+
+
+
+# We integrateed all the tools with Jenkins, Now Create a declarative jenkins  pipeline for each stage.
+### General Jenkins  declarative Pipeline Syntax
+I used Tools, Declarative Pipeline beccause we required build tool called maven
+
+```sh 
+pipeline {
+    agent any
+    tools {
+        maven 'apache-maven-3.0.1' 
+    }
+    stages {
+        stage('Example') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}
+```
+
+### Stage-01 : Git Checkout 
+1. Defiine a stage as git checkout
+1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
+1. search for checkout: check out version control
+1. give your github url, branch and generate the pipeline synatx
+1. paste it into stage steps git check
+
+```sh 
+stage('Checkout git') {
+     steps {
+	git branch: 'main', url: 'https://github.com/praveensirvi1212/DevSecOps-project'
+  }
+}
+```
+### Stage-02 : Build and Junit test
+In this stage i just used shell script sh
+1. Defiine a stage as Build and Junit test 
+1. go to this site https://opensource.triology.de/jenkins/pipeline-syntax/
+1. search for sh:shell script 
+1. give your shell comman and generate the pipeline synatx
+1. paste it into stage >  steps > sh ‘ shell command’
+1. after build success , we want to test the code using junit
+1. go to https://opensource.triology.de/jenkins/pipeline-syntax/
+1. search for Junit:Archived Junit-formatted test result
+1. give your xml test cases file > generate pipeline syntax
+1. paste it into post success
+
+```sh
+stage ('Build & JUnit Test') {
+	steps {
+		sh 'mvn install' 
+	}
+	post {
+	    success {
+		   junit 'target/surefire-reports/**/*.xml'
+		} 
+	}
+}
+```
+### Stage-02 : SonarQube Analysis
+In this stage i used withSonarQubeEnv to  Prepare SonarQube Scanner environment
+
+1. Define  a stage SonarQube Analysis
+1. paste the command that we created at the time of sonarqube project creation
+```sh
+stage('SonarQube Analysis'){
+	steps{
+	    withSonarQubeEnv('SonarQube-server') {
+		sh 'mvn clean verify sonar:sonar \
+		-Dsonar.projectKey=devsecops-project-key \
+		-Dsonar.host.url=$sonarurl \
+		-Dsonar.login=$sonarlogin'
+		}
+	}
+}
+
+```
