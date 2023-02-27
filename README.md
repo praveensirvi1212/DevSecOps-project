@@ -504,6 +504,9 @@ You applied your custom quality gate like : there should be zero ( bug, Vulnerab
 ![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/TrivyReprt.png) 
 
 
+### Images in DockerHub pushed by jenkins 
+![](https://github.com/praveensirvi1212/DevSecOps-project/blob/main/Images/dockerhubop.png) 
+
 
 
 
